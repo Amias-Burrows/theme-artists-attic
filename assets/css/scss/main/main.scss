@@ -44,6 +44,17 @@ html {
 }
 
 .searchform {
+	#s {
+		background-color: transparent;
+		outline: none;
+		border-radius: 10px;
+		border-color: $accent_2;
+		color: $accent_2;
+		&:hover, &:active, &:focus {
+			border-color: $accent_2_hover;
+			color: $accent_2_hover;
+		}
+	}
 	#searchsubmit {
 		color: $dark;
 		background-color: $accent_1;
