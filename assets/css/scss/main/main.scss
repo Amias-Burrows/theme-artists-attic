@@ -44,8 +44,8 @@ html {
 	@import '../footer/style';
 }
 
-.searchform {
-	#s {
+.searchform, .wp-block-search {
+	#s, .wp-block-search__input-1 {
 		background-color: transparent;
 		outline: none;
 		border-radius: 10px;
