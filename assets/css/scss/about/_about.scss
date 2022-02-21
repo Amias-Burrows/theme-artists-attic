@@ -2,7 +2,7 @@
 
 #about {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	.founder {
@@ -13,7 +13,7 @@
 		border-style: solid;
 		border-radius: 10px;
 		border-width: 1px;
-		border-color: rgba($accent_1, 0.5);
+		border-color: rgba($secondary, 0.5);
 		padding: 10px;
 		margin: 10px;
 		figure {
