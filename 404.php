@@ -2,7 +2,7 @@
 	get_header('404');
 ?>
 <main id='homepage'>
-	<h3>Maybe you can find what you're looking for with a search.</h3>
+	<h3>Whoops!  We couldn't find what you were looking for.</br>Maybe you can find what you're looking for with a search.</h3>
 	<?php
 		get_search_form();
 	?>
