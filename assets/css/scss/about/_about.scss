@@ -14,11 +14,20 @@
 		border-radius: 10px;
 		border-width: 1px;
 		border-color: rgba($accent_1, 0.5);
-		img {
-			width: 70%;
-		}
-		figcaption {
-			color: grey;
+		padding: 10px;
+		margin: 10px;
+		figure {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			img {
+				width: 70%;
+			}
+			figcaption {
+				color: grey;
+				font-size: 15px;
+			}
 		}
 	}
 }
