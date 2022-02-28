@@ -7,11 +7,11 @@ class walker_homepage extends Walker_Nav_menu {
 	);
 	public $has_children;
 
-	function start_lvl(&$output, $depth, $args = array() ) {
+	function start_lvl(&$output, $depth = 0, $args = null) {
 		$indent = str_repeat("\t", $depth);
 	}
 	
-	function start_el(&$output, $depth) {
+	function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0) {
 		$output .= "<li class='" . implode(" ", $item->classes) . "'>";		//Opening <li> Tag
 
 		if($id = has_post_thumbnail( (int)$item->object_id)) {
@@ -35,17 +35,17 @@ class walker_homepage extends Walker_Nav_menu {
 			$output .= "<span>";
 		}
 
-		if ($depth == 0 $$ !empty($item->description) {
+		if ($depth == 0 && !empty($item->description)) {
 			$output .= "<p id='excerpt'>" . $item->description . "</p>";
 		} else {
 			$output .= "<p id='excerpt'>Click to find out more</p>";
 		}
 	}
 
-	function end_el() {
+	function end_el(&$output, $data_object, $depth = 0, $args = null) {
 	}
 
-	function end_lvl() {
+	function end_lvl(&$output, $depth = 0, $args = null) {
 	}
 
 	function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output) {

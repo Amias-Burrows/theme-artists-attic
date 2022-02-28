@@ -55,5 +55,5 @@
 	add_action('wp_enqueue_scripts', 'artists_register_scripts');
 
 
-//require('../inc/walker.php');
+	require('inc/walker.php');
 ?>
