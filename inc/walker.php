@@ -205,7 +205,7 @@ class walker_homepage extends Walker {
 		$thumbnail = get_the_post_thumbnail($menu_item->object_id);
 	}
 
-	$output .= '<img src="' . $thumbnail . '" alt="Page Thumbnail"><div id="content">';
+	$output .= '<img src="' . $thumbnail . '" id="thumbnail" alt="Page Thumbnail"/><div id="content">';
         /** This filter is documented in wp-includes/post-template.php */
         $title = apply_filters( 'the_title', $menu_item->title, $menu_item->ID );
  
