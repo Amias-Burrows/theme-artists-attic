@@ -221,7 +221,7 @@ class walker_homepage extends Walker {
          */
         $title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
-	$my_excerpt = '<p id="excerpt">' . $menu_item->post_excerpt . 'This is extra</p>';
+	$my_excerpt = '<p id="excerpt">' . get_the_excerpt($menu_item->ID) . 'This is extra</p>';
  
         $item_output  = $args->before;
         $item_output .= '<a' . $attributes . '>';
