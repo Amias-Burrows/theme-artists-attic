@@ -7,9 +7,8 @@
 		wp_nav_menu(
 			array(
 				'menu' => 'homepage',
-				'menu_class' => 'result',
-				'container' => '',
-				'container_class' => 'artists_masonry',
+				'menu_id' => 'artists-masonry',
+				'container' => 'ul',
 				'theme_location' => 'homepage',
 				'walker' => new walker_homepage()
 			)
