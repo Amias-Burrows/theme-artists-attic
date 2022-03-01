@@ -201,8 +201,10 @@ class walker_homepage extends Walker {
         }
  
 	$thumbnail = 'https://picsum.photos/1024/600?blur=3';
-	if($id = has_post_thumbnail($menu_item->object_id)) {
+	if($id = has_post_thumbnail($menu_item->ID)) {
 		$thumbnail = get_the_post_thumbnail_url($menu_item->object_id);
+	} else if ($id = has_term_thumbnail($menu_item->ID)) {
+		$thumbnail = get_term_thumbnail($menu_item->ID);
 	}
 
 	$output .= '<img src="' . $thumbnail . '" id="thumbnail" alt="Page Thumbnail"/><div id="content">';
@@ -221,7 +223,11 @@ class walker_homepage extends Walker {
          */
         $title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
-	$my_excerpt = '<p id="excerpt">' . get_the_excerpt($menu_item->ID) . 'This is extra</p>';
+	if (get_the_excerpt($menu_item->ID) == null) {
+		$my_excerpt = '<p id="excerpt">Click to see more</p>';
+	} else {
+		$my_excerpt = '<p id="excerpt">' . get_the_excerpt($menu_item->ID) . '</p>';
+	}
  
         $item_output  = $args->before;
         $item_output .= '<a' . $attributes . '>';

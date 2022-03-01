@@ -1,5 +1,9 @@
 <?php
-	get_header('page');
+	if (in_category('gallery')) {
+		get_header('gallery');
+	} else {
+		get_header('page');
+	};
 ?>
 <main>
 <?php
@@ -9,7 +13,11 @@
 		while (have_posts()) {
 
 			the_post();
-			get_template_part('template-parts/content', 'article');
+			if (in_category('gallery')) {
+				get_template_part('template-parts/content', 'gallery');
+			} else {
+				get_template_part('template-parts/content', 'article');
+			}
 
 		}
 
