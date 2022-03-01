@@ -12,7 +12,13 @@ function find_active_tab(container) {
 			const exists = !!anchor.querySelector('ion-icon');
 			if (exists) {
 				const a_icon = anchor.querySelector('ion-icon');
-				a_icon.name += '-outline';
+				if (a_icon.name == 'open') {
+					a_icon.name = 'close';
+					a_icon.src = a_icon.src.replace('.svg', '-outline.svg');
+				} else {
+					a_icon.name = 'open';
+					a_icon.src = a_icon.src.replace('-outline.svg', '.svg');
+				}
 			}
 			return;
 		}

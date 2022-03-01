@@ -18,10 +18,10 @@ function openDeskNav() {
 		icon.name = 'apps-outline';
 	} else if (nav.classList.contains('open')) {
 		nav.classList.remove('open');
-		icon.name = 'apps';
+		icon.src = icon.src.replace('-outline.svg', '.svg');
 	} else {
 		nav.classList.add('open');
-		icon.name = 'apps-outline';
+		icon.src = icon.src.replace('.svg', '-outline.svg');
 	}
 }
 initial = false;

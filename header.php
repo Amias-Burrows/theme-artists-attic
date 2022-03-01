@@ -29,7 +29,7 @@
 			</div>
 			<nav id='header-nav'>
 				<button class='a' id='nav-handle'>
-					<ion-icon name='apps' size='large'></ion-icon>
+					<ion-icon src='./wp-content/icons/apps.svg' size='large'></ion-icon>
 				</button>
 				<?php
 					wp_nav_menu(

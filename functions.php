@@ -33,20 +33,16 @@
 	}
 
 	function artists_register_styles() {
-		$version = wp_get_theme()->get('Version');
-
-		wp_enqueue_style('artists-style', get_template_directory_uri() . '/assets/css/main.css', array(), $version, 'all');
+		wp_enqueue_style('artists-style', get_template_directory_uri() . '/assets/css/main.css', array(), null, 'all');
 	}
 	
 
 	function artists_register_scripts() {
-		$version = wp_get_theme()->get('Version');
-
 		wp_enqueue_script('artists-icons-module', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js', array(), null, true);
 		wp_enqueue_script('artists-icons-nomodule', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js', array(), null, true);
-		wp_enqueue_script('artists-desk-nav-open', get_template_directory_uri() . '/assets/js/desk_nav_open.js', array(), $version, true);
+		wp_enqueue_script('artists-desk-nav-open', get_template_directory_uri() . '/assets/js/desk_nav_open.js', array(), null, true);
 		wp_enqueue_script('artists-scroll-animation', get_template_directory_uri() . '/assets/js/scroll_animation.js', array(), $version, true);
-		wp_enqueue_script('artists-active-tab', get_template_directory_uri() . '/assets/js/active_tab.js', array(), $version, true);
+		wp_enqueue_script('artists-active-tab', get_template_directory_uri() . '/assets/js/active_tab.js', array(), null, true);
 	}
 
 	add_action('after_setup_theme', 'artists_theme_support');
