@@ -205,8 +205,6 @@ class walker_homepage extends Walker {
 	$this->increment++;
 	if($id = has_post_thumbnail($menu_item->ID)) {
 		$thumbnail = get_the_post_thumbnail_url($menu_item->object_id);
-	} else if ($id = has_term_thumbnail($menu_item->ID)) {
-		$thumbnail = get_term_thumbnail($menu_item->ID);
 	}
 
 	$output .= '<img src="' . $thumbnail . '" id="thumbnail" alt="Page Thumbnail"/><div id="content">';
