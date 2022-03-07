@@ -231,7 +231,9 @@ class walker_homepage extends Walker {
  
         $item_output  = $args->before;
         $item_output .= '<a' . $attributes . '>';
+	$item_output .= '<h3>';
         $item_output .= $args->link_before . $title . $args->link_after;
+	$item_output .= '</h3>';
         $item_output .= '</a>';
         $item_output .= $args->after;
 	$item_output .= $my_excerpt . '</div>';
