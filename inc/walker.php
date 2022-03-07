@@ -200,7 +200,7 @@ class walker_homepage extends Walker {
             }
         }
  
-	$thumbnail = 'https://picsum.photos/1024/600?blur=3';
+	$thumbnail = 'https://picsum.photos/1024/600?random=1&blur=3';
 	if($id = has_post_thumbnail($menu_item->ID)) {
 		$thumbnail = get_the_post_thumbnail_url($menu_item->object_id);
 	} else if ($id = has_term_thumbnail($menu_item->ID)) {
