@@ -1,7 +1,7 @@
 <?php
 	get_header();
 ?>
-<main>
+<main class='ignore-width'>
 	<?php
 		
 		wp_nav_menu(

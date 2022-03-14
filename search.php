@@ -1,7 +1,7 @@
 <?php
 	get_header('search');
 ?>
-<main id='homepage'>
+<main id='homepage' class='ignore-width'>
 	<div class='artists-masonry'>
 		<?php
 			
