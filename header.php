@@ -29,7 +29,7 @@
 			</div>
 			<nav id='header-nav'>
 				<button class='a' id='nav-handle'>
-				<img src='<?php echo get_template_directory_uri() . '/assets/img/menu.svg'?>'/>
+					<img src='<?php echo get_template_directory_uri() . '/assets/img/menu.svg'?>'/>
 				</button>
 				<?php
 					wp_nav_menu(
