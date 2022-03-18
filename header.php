@@ -29,7 +29,7 @@
 			</div>
 			<nav id='header-nav'>
 				<button class='a' id='nav-handle'>
-					<ion-icon name='apps' size='large'></ion-icon>
+				<i src='<?php echo get_template_directory_uri() . '/assets/img/menu.svg'?>'></i>
 				</button>
 				<?php
 					wp_nav_menu(
