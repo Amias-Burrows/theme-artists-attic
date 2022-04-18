@@ -47,6 +47,10 @@
 				?>
 					<img id='logo' src='<?php echo $logo[0] ?>' alt='Site Logo'/>
 			</div>
+			<div id='smallprint'>
+				<p>Charity Registration Number: 1198542</p>
+				<p>Address: C4D Carlinghow Mills, Batley, West Yorkshire, WF17 8LL</p>
+			</div>
 		</footer>
 	</body>
 	<?php

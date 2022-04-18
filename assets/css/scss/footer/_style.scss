@@ -47,6 +47,19 @@ footer {
 			border-radius: 50%;
 		}
 	}
+	#smallprint {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		border-top-style: solid;
+		border-color: $secondary;
+		border-width: 1px;
+		width: 100vw;
+		p {
+			font-size: 0.5rem;
+		}
+	}
 }
 
 @media (min-width: 768px) {
