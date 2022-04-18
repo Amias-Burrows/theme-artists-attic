@@ -6,7 +6,7 @@
 		if ($thumbnail) {
 			$id = get_the_post_thumbnail_url(null, 'large');
 		} else if ($term_thumbnail) {
-			$id = wp_get_attachment_image_src(get_term_thumbnail_id($term_id);
+			$id = wp_get_attachment_image_src(get_term_thumbnail_id($term_id));
 
 		} else {
 			$id = 'https://picsum.photos/1024/600?blur=3';
