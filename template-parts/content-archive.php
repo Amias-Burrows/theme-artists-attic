@@ -1,10 +1,13 @@
 <div class='result'>
 	<?php
 		$thumbnail = get_the_post_thumbnail_url(null, 'large');
-		if ($thumbnail == false) {
-			$id = 'https://picsum.photos/1024/600?blur=3';
+		$tem_thumbnail = has_term_thumbnail();
+		if ($thumbnail) {
+			$id = get_the_post_thumbnail_url(null, 'large');
+		} else if ($term_thumbnail) {
+			$id = get_term_thumbnail_id();
 		} else {
-			$id = $thumbnail;
+			$id = 'https://picsum.photos/1024/600?blur=3';
 		}
 	?>
 	<img id='thumbnail' src='<?php echo $id ?>' alt='Thumbnail Image'/>
