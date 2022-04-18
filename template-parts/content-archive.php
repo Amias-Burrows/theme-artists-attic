@@ -1,7 +1,8 @@
 <div class='result'>
 	<?php
 		$thumbnail = get_the_post_thumbnail_url(null, 'large');
-		$tem_thumbnail = has_term_thumbnail();
+		$term_id = $get_queries_object_id();
+		$term_thumbnail = has_term_thumbnail($term_id);
 		if ($thumbnail) {
 			$id = get_the_post_thumbnail_url(null, 'large');
 		} else if ($term_thumbnail) {
