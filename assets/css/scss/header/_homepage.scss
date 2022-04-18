@@ -114,6 +114,9 @@ header {
 			transition: border-radius 1s ease;
 			border-bottom-left-radius: 20px;
 			box-shadow: inset 4px 0 6px 0 rgba($dark, 0.2);
+			img {
+				width: 100%;
+			}
 		}
 		#menu {
 			list-style-type: none;
@@ -239,9 +242,6 @@ header {
 				height: 15vh;
 				width: 15vh;
 				padding: 4vh;
-				img {
-					width: 100%;
-				}
 			}
 			#menu {
 				height: 90vh;
