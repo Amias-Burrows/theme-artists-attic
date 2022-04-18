@@ -2,12 +2,12 @@
 	<?php
 		$thumbnail = has_post_thumbnail();
 		if ($thumbnail) {
-			$id = get_the_post_thumbnail(null, 'large');
+			$id = get_the_post_thumbnail_url(null, 'large');
 		} else {
-			$id = '<img id="thumbnail" src="https://picsum.photos/1024/600?blur=3" alt="Thumbnail Image">';
+			$id = 'https://picsum.photos/1024/600?blur=3';
 		}
 	?>
-	<?php echo $id ?>
+	<img id='thumbnail' src='<?php echo $id ?>' alt='Thumbnail Image'/>
 	<div id='content'>
 		<a href='<?php echo the_permalink(); ?>'>
 			<h3 id='title'><?php the_title(); ?></h3>
