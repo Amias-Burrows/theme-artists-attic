@@ -1,13 +1,12 @@
 <div class='result'>
 	<?php
-		$thumbnail = get_the_post_thumbnail_url(null, 'large');
+		$thumbnail = has_post_thumbnail();
 		$term_id = get_queried_object_id();
 		$term_thumbnail = has_term_thumbnail($term_id);
 		if ($thumbnail) {
 			$id = get_the_post_thumbnail_url(null, 'large');
 		} else if ($term_thumbnail) {
 			$id = wp_get_attachment_image_src(get_term_thumbnail_id($term_id));
-
 		} else {
 			$id = 'https://picsum.photos/1024/600?blur=3';
 		}
