@@ -1,17 +1,13 @@
 <div class='result'>
 	<?php
 		$thumbnail = has_post_thumbnail();
-		$term_id = get_queried_object_id();
-		$term_thumbnail = has_term_thumbnail($term_id);
 		if ($thumbnail) {
 			$id = get_the_post_thumbnail(null, 'large');
-		} else if ($term_thumbnail) {
-			$id = get_term_thumbnail($term_id, $size = 'large', $attr = 'id="thumbnail"');
 		} else {
 			$id = '<img id="thumbnail" src="https://picsum.photos/1024/600?blur=3" alt="Thumbnail Image">';
 		}
 	?>
-	<img id='thumbnail' src='<?php echo $id ?>' alt='Thumbnail Image'/>
+	<?php echo $id ?>
 	<div id='content'>
 		<a href='<?php echo the_permalink(); ?>'>
 			<h3 id='title'><?php the_title(); ?></h3>
