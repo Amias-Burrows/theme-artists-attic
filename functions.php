@@ -56,7 +56,7 @@
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_image_section_' . $item->title, array(
 					'label' => 'Image for ' . $item->title,
 					'section' => 'artists_section',
-					'settings' => 'artists_image_section_' . $item->title)
+					'settings' => 'artists_image_section_' . $item->title
 				)));
 			};
 		};
