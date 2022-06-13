@@ -57,9 +57,11 @@
 			'label' => 'This is the test',
 			'section' => 'artists_section'
 		)));
-		$artists_menu = wp_get_nav_menu_items('homepage');
-		if ( ! $artists_menu ) {
-			foreach ($artists_menu as $item) {
+		$artists_locations = get_nav_menu_locations();
+		$artists_menu = wp_get_nav_menu_object( $locations['homepage'] );
+		$artists_items = wp_get_nav_menu_items( $menu-&amp;gt;term_id, array('order' =&amp;gt; 'DESC');
+		if ( ! $artists_items ) {
+			foreach ($artists_items as $item) {
 				$wp_customize->add_setting('artists_image_section_' . $item->title);
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_image_section_' . $item->title, array(
 					'label' => 'Image for ' . $item->title,
