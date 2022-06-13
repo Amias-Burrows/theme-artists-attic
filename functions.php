@@ -46,12 +46,11 @@
 	}
 
 	function artists_menu_images($wp_customize) {
-		$wp_customize->add_panel('artists_panel', array(
-			'title' => __('AR Burrows Controls', 'artists')
-		));
 		$wp_customize->add_section('artists_section', array(
 			'title' => __('Homepage Menu Images'),
-			'panel' => 'nav_menus'
+			'description' => 'This is the section where you can add the images for the homepage menu',
+			'panel' => 'nav_menus',
+			'priority' => 3
 		));
 		$wp_customize->add_setting('artists_image_text');
 		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_text', array(
@@ -65,7 +64,7 @@
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_image_section_' . $item->title, array(
 					'label' => 'Image for ' . $item->title,
 					'section' => 'artists_section',
-					'settings' => 'artists_image_section_' . $item->title
+					'settings' => 'artists_image_section_' . $item->title,
 				)));
 			};
 		};
