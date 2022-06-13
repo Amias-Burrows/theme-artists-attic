@@ -53,6 +53,11 @@
 			'title' => __('Homepage Menu Images'),
 			'panel' => 'nav_menus'
 		));
+		$wp_customize->add_setting('artists_image_text');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_text', array(
+			'label' => 'This is the test',
+			'section' => 'artists_section'
+		)));
 		$artists_menu = wp_get_nav_menu_items('homepage');
 		if ( ! $artists_menu ) {
 			foreach ($artists_menu as $item) {
