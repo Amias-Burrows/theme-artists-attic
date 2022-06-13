@@ -59,7 +59,7 @@
 		)));
 		$artists_locations = get_nav_menu_locations();
 		$artists_menu = wp_get_nav_menu_object( $locations['homepage'] );
-		$artists_items = wp_get_nav_menu_items( $menu-&amp;gt;term_id, array('order' =&amp;gt; 'DESC');
+		$artists_items = wp_get_nav_menu_items( $menu =&amp;gt;term_id, array('order' =&amp;gt; 'DESC');
 		if ( ! $artists_items ) {
 			foreach ($artists_items as $item) {
 				$wp_customize->add_setting('artists_image_section_' . $item->title);
