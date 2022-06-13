@@ -52,11 +52,32 @@
 			'panel' => 'nav_menus',
 			'priority' => 3
 		));
-		$wp_customize->add_setting('artists_image_text');
-		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_text', array(
-			'label' => 'This is the test',
+		$wp_customize->add_setting('artists_image_1');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_1', array(
+			'label' => 'Image 1',
 			'section' => 'artists_section'
 		)));
+		$wp_customize->add_setting('artists_image_2');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_2', array(
+			'label' => 'Image 2',
+			'section' => 'artists_section'
+		)));
+		$wp_customize->add_setting('artists_image_3');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_3', array(
+			'label' => 'Image 3',
+			'section' => 'artists_section'
+		)));
+		$wp_customize->add_setting('artists_image_4');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_4', array(
+			'label' => 'Image 4',
+			'section' => 'artists_section'
+		)));
+		$wp_customize->add_setting('artists_image_5');
+		$wp_customize->add_control(WP_Customize_Control($wp_customize, 'artists_image_5', array(
+			'label' => 'Image 5',
+			'section' => 'artists_section'
+		)));
+		/*
 		$artists_locations = get_nav_menu_locations();
 		$artists_menu = wp_get_nav_menu_object( $locations['homepage'] );
 		$artists_items = wp_get_nav_menu_items( $menu =&amp;gt;term_id, array('order' =&amp;gt; 'DESC');
@@ -70,6 +91,7 @@
 				)));
 			};
 		};
+		 */
 	}
 
 	add_action('after_setup_theme', 'artists_theme_support');
