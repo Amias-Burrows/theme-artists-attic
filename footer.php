@@ -49,7 +49,7 @@
 			</div>
 			<section id='smallprint'>
 				<p>Charity Registration Number: 1198542</p>
-				<p>Address: <a href='https://www.google.com/maps/place/Carlinghow+Mills,+Bradford+Rd,+Batley+WF17+8LN/@53.7182943,-1.6428807,17z/data=!4m5!3m4!1s0x48796005a4c7d4a1:0x4caba1804401dc5b!8m2!3d53.7182943!4d-1.640692'>C4D Carlinghow Mills, Batley, West Yorkshire, WF17 8LL</a></p>
+				<p>Address: C4D Carlinghow Mills, Batley, West Yorkshire, WF17 8LL</p>
 			</section>
 		</footer>
 	</body>
