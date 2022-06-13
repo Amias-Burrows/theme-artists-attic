@@ -45,11 +45,29 @@
 		wp_enqueue_script('artists-active-tab', get_template_directory_uri() . '/assets/js/active_tab.js', array(), null, true);
 	}
 
+	function artists_menu_images($wp_customize) {
+		$wp_customize->add_section('artists_section', array(
+			'title' => __('Homepage Menu Images', 'artists')
+		));
+		$artists_menu = wp_get_nav_menu_items('homepage');
+		if ( ! $artists_menu ) {
+			foreach ($artists_menu as $item) {
+				$wp_customize->add_setting('artists_image_section_' . $item->title);
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_image_section_' . $item->title, array(
+					'label' => 'Image for ' . $item->title,
+					'section' => 'artists_section',
+					'settings' => 'artists_image_section_' . $item->title)
+				)));
+			};
+		};
+	}
+
 	add_action('after_setup_theme', 'artists_theme_support');
 	add_action('widgets_init', 'artists_widgets_init');
 	add_action('init', 'artists_menus');
 	add_action('wp_enqueue_scripts', 'artists_register_styles');
 	add_action('wp_enqueue_scripts', 'artists_register_scripts');
+	add_action('customize_register', 'artists_menu_images');
 
 
 	require('inc/walker.php');
