@@ -47,10 +47,10 @@
 
 	function artists_menu_images($wp_customize) {
 		$wp_customize->add_panel('artists_panel', array(
-			'title' => __('AR Burrows Controls', 'artists-attic')
+			'title' => __('AR Burrows Controls', 'artists')
 		));
 		$wp_customize->add_section('artists_section', array(
-			'title' => __('Homepage Menu Images', 'artists'),
+			'title' => __('Homepage Menu Images'),
 			'panel' => 'artists_panel'
 		));
 		$artists_menu = wp_get_nav_menu_items('homepage');
