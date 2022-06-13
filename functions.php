@@ -51,7 +51,7 @@
 		));
 		$wp_customize->add_section('artists_section', array(
 			'title' => __('Homepage Menu Images'),
-			'panel' => 'artists_panel'
+			'priority' => 0
 		));
 		$artists_menu = wp_get_nav_menu_items('homepage');
 		if ( ! $artists_menu ) {
