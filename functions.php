@@ -63,9 +63,6 @@
 	}
 
 	function artists_masonry($wp_customize) {
-		$options = get_pages();
-		$options += get_categories();
-
 			// Title section for the masonry setting section
 		$wp_customize->add_section('artists_masonry_section', array(	
 			'title' => __('Homepage Menu', 'artists_masonry'),
@@ -92,15 +89,42 @@
 			'section' => 'artists_masonry_section'
 		)));
 		
-			// LINK FOR FIRST ELEMENT
-		$wp_customize->add_setting('artists_masonry_element_1_link');
-		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-			'label' => 'First Block Link',
-			'settings' => 'artists_masonry_element_1_link',
+			// CATEGORY OR PAGE
+		$wp_customize->add_setting('artists_masonry_element_1_option', array(
+			'default' => 'Page'
+		));
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_option', array(
+			'label' => 'Does this link to a Category or a Page?',
+			'settings' => 'artists_masonry_element_1_option',
 			'section' => 'artists_masonry_section',
 			'type' => 'select',
-			'choices' => ['one', 'two', 'three']
+			'options' => ['Page', 'Category']
 		)));
+
+		$wp_customize->add_setting('artists_masonry_element_1_link');
+		if (get_theme_mod('artists_masonry_element_1_option') == 'Page') {
+				// LINK FOR THE FIRST ELEMENT AS A PAGE
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
+				'label' => 'First Block Link',
+				'settings' => 'artists_masonry_element_1_link',
+				'section' => 'artists_masonry_section',
+				'type' => 'dropdown_pages',
+			)));
+		} else if (get_theme_mod('artists_masonry_element_1_option') == 'Category') {
+			$categories = get_categories();
+			$options = array();
+			foreach($categories as $category) {
+				$options[$category->term_id] = $category->name;
+			}
+				// LINK FOR THE FIRST ELEMENT AS A CATEGORY
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
+				'label' => 'First Block Link',
+				'settings' => 'artists_masonry_element_1_link',
+				'section' => 'artists_masonry_section',
+				'type' => 'select',
+				'choices' => $options
+			)));
+		}
 
 		/*
 			// IMAGE FOR FIRST ELEMENT
