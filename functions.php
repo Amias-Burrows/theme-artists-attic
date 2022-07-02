@@ -91,26 +91,17 @@
 		
 			// CATEGORY OR PAGE
 		$wp_customize->add_setting('artists_masonry_element_1_option', array(
-			'default' => 'Page'
+			'default' => false
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_option', array(
-			'label' => 'Does this link to a Category or a Page?',
+			'label' => 'Tick this box if this links to a Category',
 			'settings' => 'artists_masonry_element_1_option',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'options' => ['Page', 'Category']
+			'type' => 'checkbox'
 		)));
 
 		$wp_customize->add_setting('artists_masonry_element_1_link');
-		if (get_theme_mod('artists_masonry_element_1_option') == 'Page') {
-				// LINK FOR THE FIRST ELEMENT AS A PAGE
-			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-				'label' => 'First Block Link',
-				'settings' => 'artists_masonry_element_1_link',
-				'section' => 'artists_masonry_section',
-				'type' => 'dropdown_pages',
-			)));
-		} else if (get_theme_mod('artists_masonry_element_1_option') == 'Category') {
+		if (get_theme_mod('artists_masonry_element_1_option')) {
 			$categories = get_categories();
 			$options = array();
 			foreach($categories as $category) {
@@ -123,6 +114,14 @@
 				'section' => 'artists_masonry_section',
 				'type' => 'select',
 				'choices' => $options
+			)));
+		} else {
+				// LINK FOR THE FIRST ELEMENT AS A PAGE
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
+				'label' => 'First Block Link',
+				'settings' => 'artists_masonry_element_1_link',
+				'section' => 'artists_masonry_section',
+				'type' => 'dropdown_pages',
 			)));
 		}
 
