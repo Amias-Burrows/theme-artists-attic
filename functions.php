@@ -91,7 +91,7 @@
 		
 			// CATEGORY OR PAGE
 		$wp_customize->add_setting('artists_masonry_element_1_option', array(
-			'default' => false
+			'default' => 'page'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_option', array(
 			'label' => 'Tick this box if this links to a Category',
@@ -105,7 +105,7 @@
 		)));
 
 		$wp_customize->add_setting('artists_masonry_element_1_link');
-		if (get_theme_mod('artists_masonry_element_1_option') == 'Page') {
+		if (get_theme_mod('artists_masonry_element_1_option') == 'categories') {
 			$categories = get_categories();
 			$options = array();
 			foreach($categories as $category) {
