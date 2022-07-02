@@ -68,6 +68,7 @@
 
 			// Title section for the masonry setting section
 		$wp_customize->add_panel('artists_masonry_panel');
+		/*
 		$wp_customize->add_section('artists_masonry_section', array(	
 			'title' => __('Homepage Menu', 'artists_masonry'),
 			'panel' => 'artists_masonry_panel'
@@ -312,6 +313,7 @@
 			'settings' => 'artists_masonry_element_6_image',
 			'section' => 'artists_masonry_section'
 		)));
+		 */
 	}
 
 	add_action('after_setup_theme', 'artists_theme_support');
