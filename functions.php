@@ -125,7 +125,7 @@
 				'label' => 'Page Link',
 				'settings' => 'artists_masonry_element_1_link',
 				'section' => 'artists_masonry_section',
-				'type' => 'dropdown_pages',
+				'type' => 'dropdown-pages',
 			)));
 		}
 
