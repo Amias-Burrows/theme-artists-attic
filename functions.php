@@ -104,32 +104,15 @@
 			)
 		)));
 
-		$wp_customize->add_setting('artists_masonry_element_1_link');
-		if (get_theme_mod('artists_masonry_element_1_option') == 'category') {
-			$categories = get_categories();
-			$options = array();
-			$i = 0;
-			foreach($categories as $category) {
-				$options[$i] = $category->name;
-				$i++;
-			}
-				// LINK FOR THE FIRST ELEMENT AS A CATEGORY
-			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-				'label' => 'Category Link',
-				'settings' => 'artists_masonry_element_1_link',
-				'section' => 'artists_masonry_section',
-				'type' => 'select',
-				'choices' => $options
-			)));
-		} else {
-				// LINK FOR THE FIRST ELEMENT AS A PAGE
-			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-				'label' => 'Page Link',
-				'settings' => 'artists_masonry_element_1_link',
-				'section' => 'artists_masonry_section',
-				'type' => 'dropdown-pages',
-			)));
-		}
+		$wp_customize->add_setting('artists_masonry_element_1_link', array(
+			'default' => get_home_url()
+		));
+			// LINK FOR THE FIRST ELEMENT AS A PAGE
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
+			'label' => 'Page Link',
+			'settings' => 'artists_masonry_element_1_link',
+			'section' => 'artists_masonry_section',
+		)));
 
 		/*
 			// IMAGE FOR FIRST ELEMENT
