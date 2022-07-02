@@ -47,7 +47,8 @@
 
 	function artists_menu_images($wp_customize) {
 		$wp_customize->add_section('artists_section', array(
-			'title' => __('Homepage Menu Images', 'artists')
+			'title' => __('Homepage Menu Images', 'artists'),
+			'description' => "To input a link copy the URL (commonly called a 'Permalink' in WordPress) and paste it into the text box below the Link title"
 		));
 		$artists_menu = wp_get_nav_menu_items('homepage');
 		if ( ! $artists_menu ) {
@@ -87,7 +88,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_1_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 
 		$wp_customize->add_setting('artists_masonry_element_1_link', array(
@@ -126,7 +128,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_2_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_2_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 		
 			// LINK FOR SECOND ELEMENT
@@ -165,7 +168,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_3_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_3_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 		
 			// LINK FOR THIRD ELEMENT
@@ -204,7 +208,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_4_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_4_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 		
 			// LINK FOR FOURTH ELEMENT
@@ -243,7 +248,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_5_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_5_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 		
 			// LINK FOR FIFTH ELEMENT
@@ -282,7 +288,8 @@
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_6_description', array(
 			'label' => 'Description',
 			'settings' => 'artists_masonry_element_6_description',
-			'section' => 'artists_masonry_section'
+			'section' => 'artists_masonry_section',
+			'type' => 'textarea'
 		)));
 		
 			// LINK FOR SIXTH ELEMENT
