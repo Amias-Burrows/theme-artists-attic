@@ -67,8 +67,10 @@
 		$options += get_categories();
 
 			// Title section for the masonry setting section
+		$wp_customize->add_panel('artists_masonry_panel');
 		$wp_customize->add_section('artists_masonry_section', array(	
-			'title' => __('Homepage Menu', 'artists_masonry')
+			'title' => __('Homepage Menu', 'artists_masonry'),
+			'panel' => 'artists_masonry_panel'
 		));
 
 			// TITLE FOR FIRST ELEMENT
