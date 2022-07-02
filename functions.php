@@ -63,7 +63,7 @@
 	}
 
 	function artists_masonry($wp_customize) {
-		var $options = get_pages();
+		$options = get_pages();
 		$options += get_categories();
 
 			// Title section for the masonry setting section
@@ -317,7 +317,6 @@
 	add_action('init', 'artists_menus');
 	add_action('wp_enqueue_scripts', 'artists_register_styles');
 	add_action('wp_enqueue_scripts', 'artists_register_scripts');
-	add_action('customize_register', 'artists_menu_images');
 	add_action('customize_register', 'artists_masonry');
 
 
