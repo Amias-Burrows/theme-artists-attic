@@ -105,7 +105,7 @@
 
 			// IMAGE FOR FIRST ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_1_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_1_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_1_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_1_image',
 			'section' => 'artists_masonry_section'
@@ -145,7 +145,7 @@
 
 			// IMAGE FOR SECOND ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_2_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_2_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_2_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_2_image',
 			'section' => 'artists_masonry_section'
@@ -185,7 +185,7 @@
 
 			// IMAGE FOR THIRD ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_3_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_3_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_3_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_3_image',
 			'section' => 'artists_masonry_section'
@@ -225,7 +225,7 @@
 
 			// IMAGE FOR FOURTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_4_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_4_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_4_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_4_image',
 			'section' => 'artists_masonry_section'
@@ -265,7 +265,7 @@
 
 			// IMAGE FOR FIFTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_5_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_5_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_5_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_5_image',
 			'section' => 'artists_masonry_section'
@@ -305,7 +305,7 @@
 
 			// IMAGE FOR SIXTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_6_image');
-		$wp_customize->add_control(new WP_Cuztomize_Image_Control($wp_customize, 'artists_masonry_elements_6_image', array(
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_6_image', array(
 			'label' => 'First Block Background Image',
 			'settings' => 'artists_masonry_element_6_image',
 			'section' => 'artists_masonry_section'
