@@ -12,7 +12,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_1_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_1_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_1_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_1_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_1_description'); ?></p>
 			</div>
 		</div>
@@ -25,7 +27,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_2_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_2_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_2_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_2_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_2_description'); ?></p>
 			</div>
 		</div>
@@ -38,7 +42,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_3_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_3_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_3_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_3_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_3_description'); ?></p>
 			</div>
 		</div>
@@ -51,7 +57,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_4_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_4_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_4_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_4_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_4_description'); ?></p>
 			</div>
 		</div>
@@ -64,7 +72,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_5_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_5_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_5_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_5_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_5_description'); ?></p>
 			</div>
 		</div>
@@ -77,7 +87,9 @@
 			}
 			?>
 			<div id='content'>
-				<a href='<?php echo get_theme_mod('artists_masonry_element_6_link'); ?>'><?php echo get_theme_mod('artists_masonry_element_6_title'); ?></a>
+				<a href='<?php echo get_theme_mod('artists_masonry_element_6_link'); ?>'>
+					<h3><?php echo get_theme_mod('artists_masonry_element_6_title'); ?></h3>
+				</a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_6_description'); ?></p>
 			</div>
 		</div>
