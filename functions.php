@@ -75,6 +75,7 @@
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_title', array(
 			'label' => 'First Block Title',
+			'description' => 'This section fills out the content for the first block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_1_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -84,7 +85,7 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_1_description',
 			'section' => 'artists_masonry_section'
 		)));
@@ -94,16 +95,15 @@
 		));
 			// LINK FOR THE FIRST ELEMENT AS A PAGE
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-			'label' => 'Page Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_1_link',
 			'section' => 'artists_masonry_section',
 		)));
 
-		/*
 			// IMAGE FOR FIRST ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_1_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_1_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_1_image',
 			'section' => 'artists_masonry_section'
 		)));
@@ -113,7 +113,8 @@
 			'default' => 'Title'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_2_title', array(
-			'label' => 'First Block Title',
+			'label' => 'Second Block Title',
+			'description' => 'This section fills out the content for the second block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_2_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -123,27 +124,25 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_2_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_2_description',
 			'section' => 'artists_masonry_section'
 		)));
 		
 			// LINK FOR SECOND ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_2_link', array(
-			'default' => 'Select a page or category from the dropdown'
+			'default' => get_home_url()
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_2_link', array(
-			'label' => 'First Block Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_2_link',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'choices' => $options
 		)));
 
 			// IMAGE FOR SECOND ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_2_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_2_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_2_image',
 			'section' => 'artists_masonry_section'
 		)));
@@ -153,7 +152,8 @@
 			'default' => 'Title'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_3_title', array(
-			'label' => 'First Block Title',
+			'label' => 'Third Block Title',
+			'description' => 'This section fills out the content for the third block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_3_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -163,27 +163,25 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_3_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_3_description',
 			'section' => 'artists_masonry_section'
 		)));
 		
 			// LINK FOR THIRD ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_3_link', array(
-			'default' => 'Select a page or category from the dropdown'
+			'default' => get_home_url()
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_3_link', array(
-			'label' => 'First Block Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_3_link',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'choices' => $options
 		)));
 
 			// IMAGE FOR THIRD ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_3_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_3_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_3_image',
 			'section' => 'artists_masonry_section'
 		)));
@@ -193,7 +191,8 @@
 			'default' => 'Title'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_4_title', array(
-			'label' => 'First Block Title',
+			'label' => 'Fourth Block Title',
+			'description' => 'This section fills out the content for the fourth block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_4_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -203,27 +202,25 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_4_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_4_description',
 			'section' => 'artists_masonry_section'
 		)));
 		
 			// LINK FOR FOURTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_4_link', array(
-			'default' => 'Select a page or category from the dropdown'
+			'default' => get_home_url()
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_4_link', array(
-			'label' => 'First Block Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_4_link',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'choices' => $options
 		)));
 
 			// IMAGE FOR FOURTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_elements_4_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_4_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_4_image',
 			'section' => 'artists_masonry_section'
 		)));
@@ -233,7 +230,8 @@
 			'default' => 'Title'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_5_title', array(
-			'label' => 'First Block Title',
+			'label' => 'Fifth Block Title',
+			'description' => 'This section fills out the content for the fifth block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_5_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -243,27 +241,25 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_5_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_5_description',
 			'section' => 'artists_masonry_section'
 		)));
 		
 			// LINK FOR FIFTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_5_link', array(
-			'default' => 'Select a page or category from the dropdown'
+			'default' => get_home_url()
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_5_link', array(
-			'label' => 'First Block Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_5_link',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'choices' => $options
 		)));
 
 			// IMAGE FOR FIFTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_5_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_5_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_5_image',
 			'section' => 'artists_masonry_section'
 		)));
@@ -273,7 +269,8 @@
 			'default' => 'Title'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_6_title', array(
-			'label' => 'First Block Title',
+			'label' => 'Sixth Block Title',
+			'description' => 'This section fills out the content for the sixth block on the masonry grid layout.',
 			'settings' => 'artists_masonry_element_6_title',
 			'section' => 'artists_masonry_section'
 		)));
@@ -283,31 +280,28 @@
 			'default' => 'Description'
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_6_description', array(
-			'label' => 'First Block Description',
+			'label' => 'Description',
 			'settings' => 'artists_masonry_element_6_description',
 			'section' => 'artists_masonry_section'
 		)));
 		
 			// LINK FOR SIXTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_6_link', array(
-			'default' => 'Select a page or category from the dropdown'
+			'default' => get_home_url()
 		));
 		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_6_link', array(
-			'label' => 'First Block Link',
+			'label' => 'Link',
 			'settings' => 'artists_masonry_element_6_link',
 			'section' => 'artists_masonry_section',
-			'type' => 'select',
-			'choices' => $options
 		)));
 
 			// IMAGE FOR SIXTH ELEMENT
 		$wp_customize->add_setting('artists_masonry_element_6_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_6_image', array(
-			'label' => 'First Block Background Image',
+			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_6_image',
 			'section' => 'artists_masonry_section'
 		)));
-		*/
 	}
 
 	add_action('after_setup_theme', 'artists_theme_support');
