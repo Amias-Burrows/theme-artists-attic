@@ -110,6 +110,7 @@
 			$options = array();
 			$i = 0;
 			foreach($categories as $category) {
+				print_r($category);
 				$options[$i] = $category->name;
 				$i++;
 			}
