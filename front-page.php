@@ -8,7 +8,6 @@
 			<div id='content'>
 				<a href='<?php echo get_theme_mod('artists_masonry_element_1_link') ?>'><?php echo get_theme_mod('artists_masonry_element_1_title') ?></a>
 				<p id='excerpt'><?php echo get_theme_mod('artists_masonry_element_1_description') ?></p>
-				<p><?php echo get_theme_mod('artists_masonry_element_1_option') ?></p>
 			</div>
 		</div>
 		<div class='result'>
