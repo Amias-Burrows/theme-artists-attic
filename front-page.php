@@ -73,7 +73,7 @@
 			if (get_theme_mod('artists_masonry_element_6_image') != null) {
 				?><img id='thumbnail' src='<?php echo get_theme_mod('artists_masonry_element_6_image'); ?>' alt='<?php echo get_theme_mod('artists_masonry_element_6_title'); ?>'/><?php
 			} else {
-				?><img id='thumbnail' src='://picsum.photos/1024/600?blur=3&random=6' alt='<?php echo get_theme_mod('artists_masonry_element_6_title'); ?>'/><?php
+				?><img id='thumbnail' src='https://picsum.photos/1024/600?blur=3&random=6' alt='<?php echo get_theme_mod('artists_masonry_element_6_title'); ?>'/><?php
 			}
 			?>
 			<div id='content'>
