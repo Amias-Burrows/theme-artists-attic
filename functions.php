@@ -108,8 +108,10 @@
 		if (get_theme_mod('artists_masonry_element_1_option') == 'category') {
 			$categories = get_categories();
 			$options = array();
+			$i = 0;
 			foreach($categories as $category) {
-				$options[$category->term_id] = $category->name;
+				$options[$i] = $category->name;
+				$i++;
 			}
 				// LINK FOR THE FIRST ELEMENT AS A CATEGORY
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
