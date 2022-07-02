@@ -105,7 +105,7 @@
 		)));
 
 		$wp_customize->add_setting('artists_masonry_element_1_link');
-		if (get_theme_mod('artists_masonry_element_1_option') == 'categories') {
+		if (get_theme_mod('artists_masonry_element_1_option') == 'category') {
 			$categories = get_categories();
 			$options = array();
 			foreach($categories as $category) {
