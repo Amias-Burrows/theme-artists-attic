@@ -97,11 +97,15 @@
 			'label' => 'Tick this box if this links to a Category',
 			'settings' => 'artists_masonry_element_1_option',
 			'section' => 'artists_masonry_section',
-			'type' => 'checkbox'
+			'type' => 'radio',
+			'choices' => array(
+				'page' => __('Page'),
+				'category' => __('Category')
+			)
 		)));
 
 		$wp_customize->add_setting('artists_masonry_element_1_link');
-		if (get_theme_mod('artists_masonry_element_1_option')) {
+		if (get_theme_mod('artists_masonry_element_1_option') == 'Page') {
 			$categories = get_categories();
 			$options = array();
 			foreach($categories as $category) {
@@ -109,7 +113,7 @@
 			}
 				// LINK FOR THE FIRST ELEMENT AS A CATEGORY
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-				'label' => 'First Block Link',
+				'label' => 'Category Link',
 				'settings' => 'artists_masonry_element_1_link',
 				'section' => 'artists_masonry_section',
 				'type' => 'select',
@@ -118,7 +122,7 @@
 		} else {
 				// LINK FOR THE FIRST ELEMENT AS A PAGE
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'artists_masonry_element_1_link', array(
-				'label' => 'First Block Link',
+				'label' => 'Page Link',
 				'settings' => 'artists_masonry_element_1_link',
 				'section' => 'artists_masonry_section',
 				'type' => 'dropdown_pages',
