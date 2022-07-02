@@ -103,7 +103,7 @@
 		)));
 
 			// IMAGE FOR FIRST ELEMENT
-		$wp_customize->add_setting('artists_masonry_elements_1_image');
+		$wp_customize->add_setting('artists_masonry_element_1_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_1_image', array(
 			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_1_image',
@@ -143,7 +143,7 @@
 		)));
 
 			// IMAGE FOR SECOND ELEMENT
-		$wp_customize->add_setting('artists_masonry_elements_2_image');
+		$wp_customize->add_setting('artists_masonry_element_2_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_2_image', array(
 			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_2_image',
@@ -183,7 +183,7 @@
 		)));
 
 			// IMAGE FOR THIRD ELEMENT
-		$wp_customize->add_setting('artists_masonry_elements_3_image');
+		$wp_customize->add_setting('artists_masonry_element_3_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_3_image', array(
 			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_3_image',
@@ -223,7 +223,7 @@
 		)));
 
 			// IMAGE FOR FOURTH ELEMENT
-		$wp_customize->add_setting('artists_masonry_elements_4_image');
+		$wp_customize->add_setting('artists_masonry_element_4_image');
 		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'artists_masonry_elements_4_image', array(
 			'label' => 'Background Image',
 			'settings' => 'artists_masonry_element_4_image',
