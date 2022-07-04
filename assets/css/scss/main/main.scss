@@ -8,6 +8,8 @@ html {
 	scroll-behavior: smooth;
 
 	body {
+		animation-name: background-colour;
+		animation-duration: 10s;
 		&#homepage {
 			overflow-x: hidden;
 			margin: 0;
@@ -74,6 +76,21 @@ html {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+@keyframes background-colour {
+	0% {
+		background-color: rgba(#96262B, 0.6);
+	}
+	35% {
+		background-color: rgba(#F2C401, 0.6);
+	}
+	65% {
+		background-color: rgba(#275C9E, 0.6);
+	}
+	100% {
+		background-color: rgba(#96262B, 0.6);
+	}
 }
 
 @media (min-width: 768px) {
