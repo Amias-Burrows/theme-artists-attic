@@ -10,6 +10,7 @@ html {
 	body {
 		animation-name: background-colour;
 		animation-duration: 10s;
+		animation-iteration-count: infinite;
 		&#homepage {
 			overflow-x: hidden;
 			margin: 0;
