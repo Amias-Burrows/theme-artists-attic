@@ -67,6 +67,7 @@ footer {
 	footer {
 		flex-direction: row;
 		justify-content: space-around;
+		flex-wrap: wrap;
 		div {
 			&:last-child {
 				width: 20vw;
